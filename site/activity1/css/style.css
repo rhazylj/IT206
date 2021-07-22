@@ -1,61 +1,79 @@
-h1 {
-    color:white;
-    background-color: purple;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 75%larger;
-}  
-
 * {
-    border: 1px solid black;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
-h2 {
-    color:white;
-    background-color: red;
-    text-align: right;
-    text-emphasis-position: vertical;
-    font-size: 75%larger;
-} 
+html {
+  background-color: darkslategrey;
+}
 
+section {
+  border: 1px lightgreen solid;
+  width: 33.33%;
+  float: left;
+  position: relative;
+
+  padding: 10px;
+  padding-top: 60px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightsalmon;
+}
 p {
-    color: white;
-    background-color: hotpink;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50%larger;
+  text-align: center;
 }
 
-h3 {
-    color:white;
-    background-color: green;
-    text-align: right;
-    font-size: 75%larger;
-} 
-
-h4 {
-    color:white;
-    background-color: blue;
-    text-align: right;
-    font-size: 75%larger;
-} 
-
-.left, .right {
-  float: left;
-  width: 50%; /* The width is 20%, by default */
+h1 {
+  color: lightblue;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 75px;
+  font-family:Arial;
 }
 
-.main {
-  float: left;
-  width: 50%; /* The width is 60%, by default */
+section > span {
+  background-color: lightseagreen;
+  border: 1px lightgreen solid;
 }
 
-/* Use a media query to add a breakpoint at 800px: */
-@media screen and (max-width: 992px) {
-  .left, .main, .right {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+span p.title {
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+span {
+  border: 1px solid lightslategray;
+  position: absolute;
+  width: 35%;
+  height: 30%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+@media (max-width: 992px) {
+  section{
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  section.first {
+    width: 50%;
+  }
+
+  section.second {
+    width: 50%;
+  }
+  section.third {
+    width: 100%;
+  }
+}
+
+@media (min-width: 767px) {
+  section {
+    width: 100%;
   }
 }
